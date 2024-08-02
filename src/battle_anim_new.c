@@ -1549,6 +1549,17 @@ const struct SpriteTemplate gSteamEruptionBreathTemplate =
     .callback = AnimDragonFireToTarget
 };
 
+const struct SpriteTemplate gSteamdropBreathTemplate =
+{
+    .tileTag = ANIM_TAG_STEAMDROP,
+    .paletteTag = ANIM_TAG_STEAMDROP,
+    .oam = &gOamData_AffineDouble_ObjNormal_32x32,
+    .anims = gAnims_DragonBreathFire,
+    .images = NULL,
+    .affineAnims = gAffineAnims_DragonBreathFire,
+    .callback = AnimDragonFireToTarget
+};
+
 //hyperspace hole
 const struct SpriteTemplate gHyperspaceHoleImpactTemplate =
 {
@@ -5695,6 +5706,16 @@ const struct SpriteTemplate gDevastatingDrakePurpleBlastSpriteTemplate =
 {
     .tileTag = ANIM_TAG_FIRE_PLUME,
     .paletteTag = ANIM_TAG_FIRE_PLUME,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gAnims_FirePlume,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimBlastBurnTargetPlume
+};
+const struct SpriteTemplate gDecimationBlastBurnSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_FIRE_PLUME,
+    .paletteTag = ANIM_TAG_WISP_ORB,
     .oam = &gOamData_AffineOff_ObjNormal_32x32,
     .anims = gAnims_FirePlume,
     .images = NULL,

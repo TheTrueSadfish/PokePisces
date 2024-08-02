@@ -92,14 +92,17 @@ extern const struct TrainerMoney gTrainerMoneyTable[];
 extern const u8 gAbilityNames[][ABILITY_NAME_LENGTH + 1];
 extern const u8 *const gAbilityDescriptionPointers[];
 
-extern const u8 gStatusConditionString_PoisonJpn[8];
-extern const u8 gStatusConditionString_SleepJpn[8];
-extern const u8 gStatusConditionString_ParalysisJpn[8];
-extern const u8 gStatusConditionString_BurnJpn[8];
-extern const u8 gStatusConditionString_IceJpn[8];
-extern const u8 gStatusConditionString_ConfusionJpn[8];
-extern const u8 gStatusConditionString_LoveJpn[8];
+extern const u8 gStatusConditionString_PoisonJpn[11];
+extern const u8 gStatusConditionString_SleepJpn[11];
+extern const u8 gStatusConditionString_ParalysisJpn[11];
+extern const u8 gStatusConditionString_BurnJpn[11];
+extern const u8 gStatusConditionString_IceJpn[11];
+extern const u8 gStatusConditionString_ConfusionJpn[11];
+extern const u8 gStatusConditionString_LoveJpn[11];
+extern const u8 gStatusConditionString_PanicJpn[11];
+extern const u8 gStatusConditionString_ExposedJpn[11];
+extern const u8 gStatusConditionString_BloomingJpn[11];
 
-extern const u8 *const gStatusConditionStringsTable[7][2];
+extern const u8 *const gStatusConditionStringsTable[10][2];
 
 #endif // GUARD_BATTLE_MAIN_H

@@ -620,6 +620,8 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_ROWAP_BERRY] = {gItemIcon_RowapBerry, gItemIconPalette_RowapBerry},
     [ITEM_KEE_BERRY] = {gItemIcon_KeeBerry, gItemIconPalette_KeeBerry},
     [ITEM_MARANGA_BERRY] = {gItemIcon_MarangaBerry, gItemIconPalette_MarangaBerry},
+    [ITEM_RIZZ_BERRY] = {gItemIcon_RizzBerry, gItemIconPalette_RizzBerry},
+    [ITEM_YELLOW_SODA] = {gItemIcon_YellowSoda, gItemIconPalette_YellowSoda},
     [ITEM_ENIGMA_BERRY_E_READER] = {gItemIcon_EnigmaBerry, gItemIconPalette_EnigmaBerry},
     // TMs/HMs
     [ITEM_TM01] = {gItemIcon_TM, gItemIconPalette_PsychicTMHM},
@@ -919,6 +921,7 @@ const u32 *const gItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_POKEMON_CARD] = {gItemIcon_PokemonCard, gItemIconPalette_PokemonCard},
     [ITEM_POKER_CARD] = {gItemIcon_PokerCard, gItemIconPalette_PokerCard},
     [ITEM_CRYPTIC_PLATE] = {gItemIcon_CrypticPlate, gItemIconPalette_CrypticPlate},
+    [ITEM_CHUPACABRA] = {gItemIcon_Chupacabra, gItemIconPalette_Chupacabra},
     // Return to field arrow
     [ITEMS_COUNT] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

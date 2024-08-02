@@ -6517,6 +6517,8 @@ const struct Item gItems[] =
     {
         .name = _("Razz Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_RAZZ_BERRY,
+        .holdEffectParam = 2,
         .description = sRazzBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6527,6 +6529,8 @@ const struct Item gItems[] =
     {
         .name = _("Bluk Berry"),
         .price = 2000,
+        .holdEffect = HOLD_EFFECT_BLUK_BERRY,
+        .holdEffectParam = 2,
         .description = sBlukBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
@@ -6537,6 +6541,8 @@ const struct Item gItems[] =
     {
         .name = _("Nanab Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_NANAB_BERRY,
+        .holdEffectParam = 2,
         .description = sNanabBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6548,6 +6554,8 @@ const struct Item gItems[] =
     {
         .name = _("Wepear Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_WEPEAR_BERRY,
+        .holdEffectParam = 4,
         .description = sWepearBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6559,6 +6567,8 @@ const struct Item gItems[] =
     {
         .name = _("Pinap Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_PINAP_BERRY,
+        .holdEffectParam = 4,
         .description = sPinapBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6606,10 +6616,12 @@ const struct Item gItems[] =
     {
         .name = _("Hondew Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_HONDEW_BERRY,
+        .holdEffectParam = 4,
         .description = sHondewBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_ReduceEV,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 10,
     },
 
@@ -6639,6 +6651,8 @@ const struct Item gItems[] =
     {
         .name = _("Cornn Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_CORNN_BERRY,
+        .holdEffectParam = 4,
         .description = sCornnBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6662,6 +6676,8 @@ const struct Item gItems[] =
     {
         .name = _("Rabuta Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_RABUTA_BERRY,
+        .holdEffectParam = 4,
         .description = sRabutaBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6673,6 +6689,7 @@ const struct Item gItems[] =
     {
         .name = _("Nomel Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_NOMEL_BERRY,
         .description = sNomelBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6684,6 +6701,8 @@ const struct Item gItems[] =
     {
         .name = _("Spelon Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_SPELON_BERRY,
+        .holdEffectParam = 4,
         .description = sSpelonBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6719,6 +6738,8 @@ const struct Item gItems[] =
     {
         .name = _("Durin Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_DURIN_BERRY,
+        .holdEffectParam = 2,
         .description = sDurinBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -6730,6 +6751,8 @@ const struct Item gItems[] =
     {
         .name = _("Belue Berry"),
         .price = 20,
+        .holdEffect = HOLD_EFFECT_BELUE_BERRY,
+        .holdEffectParam = 4,
         .description = sBelueBerryDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
@@ -7142,6 +7165,32 @@ const struct Item gItems[] =
         .price = 20,
         .holdEffect = HOLD_EFFECT_MARANGA_BERRY,
         .description = sMarangaBerryDesc,
+        .pocket = POCKET_BERRIES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+    },
+
+    [ITEM_RIZZ_BERRY] =
+    {
+        .name = _("Rizz Berry"),
+        .price = 20,
+        .holdEffect = HOLD_EFFECT_RIZZ_BERRY,
+        .holdEffectParam = 4,
+        .description = sRizzBerryDesc,
+        .pocket = POCKET_BERRIES,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 10,
+    },
+
+    [ITEM_YELLOW_SODA] =
+    {
+        .name = _("Rizz Berry"),
+        .price = 20,
+        .holdEffect = HOLD_EFFECT_YELLOW_SODA,
+        .holdEffectParam = 4,
+        .description = sYellowSodaDesc,
         .pocket = POCKET_BERRIES,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10087,6 +10136,7 @@ const struct Item gItems[] =
     {
         .name = _("Moon Mirror"),
         .price = 2000,
+        .holdEffect = HOLD_EFFECT_MOON_MIRROR,
         .description = sMoonMirrorDesc,
         .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
@@ -10395,15 +10445,14 @@ const struct Item gItems[] =
     [ITEM_SURPRISE_GIFT] =
     {
         .name = _("Heart Gift"),
-        .price = 4000,
-        .holdEffect = HOLD_EFFECT_NONE,
-        .description = sSurpriseGiftDesc,
+        .price = 666,
+        .holdEffect = HOLD_EFFECT_HEART_GIFT,
+        .description = sHeartGiftDesc,
         .pocket = POCKET_BATTLE_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
-        .flingPower = 5,
+        .flingPower = 66,
     },
-
     [ITEM_BUDDY_CARD] =
     {
         .name = _("Buddy Card"),
@@ -10491,6 +10540,18 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
         .flingPower = 90,
+    },
+
+    [ITEM_CHUPACABRA] =
+    {
+        .name = _("Chupacabra"),
+        .price = 3000,
+        .holdEffect = HOLD_EFFECT_CHUPACABRA,
+        .description = sChupacabraDesc,
+        .pocket = POCKET_BATTLE_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .flingPower = 20,
     },
 
 };

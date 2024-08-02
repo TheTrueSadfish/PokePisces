@@ -2763,54 +2763,54 @@ static const u8 sIapapaBerryDesc[] = _(
     "may confuse.");
 
 static const u8 sRazzBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Razz.");
+    "Eaten at 1/2 HP\n"
+    "to infatuate a foe\n"
+    "of the opposite gender.");
 
 static const u8 sBlukBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Bluk.");
+    "Eaten at 1/2 HP\n"
+    "to reduce PP of foe's\n"
+    "last used move.");
 
 static const u8 sNanabBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Nanab.");
+    "Eaten at 1/2 HP\n"
+    "to up user's stockpile\n"
+    "counter by 1.");
 
 static const u8 sWepearBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Wepear.");
+    "Eaten at 1/4 HP\n"
+    "To identify\n"
+    "the opponent.");
 
 static const u8 sPinapBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Pinap.");
+    "Eaten at 1/4 HP.\n"
+    "User will then do 1/4\n"
+    "Max HP damage to foe.");
 
 static const u8 sPomegBerryDesc[] = _(
-    "Makes a Pokémon\n"
-    "friendly but lowers\n"
-    "base HP.");
+    "Eaten at 1/20 HP.\n"
+    "Increases max HP by\n"
+    "200 and heals fully.");
 
 static const u8 sKelpsyBerryDesc[] = _(
-    "Makes a Pokémon\n"
-    "friendly but lowers\n"
-    "base Attack.");
+    "When using a Pulse\n"
+    "move, is consumed to\n"
+    "up damage by 1.5x.");
 
 static const u8 sQualotBerryDesc[] = _(
-    "Makes a Pokémon\n"
-    "friendly but lowers\n"
-    "base Defense.");
+    "When using a Wind\n"
+    "move, is consumed to\n"
+    "up damage by 1.5x.");
 
 static const u8 sHondewBerryDesc[] = _(
-    "Makes a Pokémon\n"
-    "friendly but lowers\n"
-    "base Sp. Atk.");
+    "Eaten at 1/4 HP\n"
+    "to give user Aqua\n"
+    "Ring and Hearthwarm.");
 
 static const u8 sGrepaBerryDesc[] = _(
-    "Makes a Pokémon\n"
-    "friendly but lowers\n"
-    "base Sp. Def.");
+    "When using a Kick\n"
+    "move, is consumed to\n"
+    "up damage by 1.5x.");
 
 static const u8 sTamatoBerryDesc[] = _(
     "A unique berry\n"
@@ -2818,49 +2818,49 @@ static const u8 sTamatoBerryDesc[] = _(
     "a lot.");
 
 static const u8 sCornnBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Cornn.");
+    "Eaten at 1/4 HP\n"
+    "to inflict Salt Corn\n"
+    "on the opponent.");
 
 static const u8 sMagostBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Magost.");
+    "Reduces damage when\n"
+    "hit by any attack,\n"
+    "then is consumed.");
 
 static const u8 sRabutaBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Rabuta.");
+    "Eaten at 1/4 HP\n"
+    "and will confuse\n"
+    "the opponent.");
 
 static const u8 sNomelBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Nomel.");
+    "When using a Pierce\n"
+    "move, is consumed to\n"
+    "up damage by 1.5x.");
 
 static const u8 sSpelonBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Spelon.");
+    "Eaten at 1/4 HP.\n"
+    "Spikes will be laid\n"
+    "on the foe's side.");
 
 static const u8 sPamtreBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Pamtre.");
+    "A held item that\n"
+    "heals panic\n"
+    "in battle.");
 
 static const u8 sWatmelBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Watmel.");
+    "Eaten if holder has\n"
+    "Blooming. Will\n"
+    "explode destructively.");
 
 static const u8 sDurinBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Durin.");
+    "Eaten if protected\n"
+    "and hit. Will deal\n"
+    "spike damage back.");
 
 static const u8 sBelueBerryDesc[] = _(
-    "{POKEBLOCK} ingredient.\n"
-    "Plant in loamy soil\n"
-    "to grow Belue.");
+    "Eaten at 1/4 HP.\n"
+    "to cover the\n"
+    "opponent in Tar.");
 
 static const u8 sChilanBerryDesc[] = _(
     "A held item that\n"
@@ -2988,9 +2988,9 @@ static const u8 sStarfBerryDesc[] = _(
     "stat in a pinch.");
 
 static const u8 sEnigmaBerryDesc[] = _(
-    "A held item that\n"
-    "heals from super\n"
-    "effective moves.");
+    "Can be consumed\n"
+    "to nullify damage\n"
+    "from Relic moves.");
 
 static const u8 sMicleBerryDesc[] = _(
     "When held, it ups\n"
@@ -4174,14 +4174,14 @@ static const u8 sCreditCardDesc[] = _(
     "card.");
 
 static const u8 sRizzBerryDesc[] = _(
-    "A held item that\n"
-    "that infatuates\n"
-    "ignoring gender.");
+    "Eaten at 1/4 HP\n"
+    "to infatuate a foe.\n"
+    "Ignores gender.");
 
 static const u8 sPeskyPlushDesc[] = _(
-    "Bug-type moves\n"
-    "have a chance to\n"
-    "Torment and Taunt.");
+    "Bug-type attacking\n"
+    "moves Torment the\n"
+    "foe.");
 
 static const u8 sBlackSaladDesc[] = _(
     "Attacks may cause\n"
@@ -4305,3 +4305,13 @@ static const u8 sCrypticPlateDesc[] = _(
     "Sets Gravity and\n"
     "Safeguard, and ups\n"
     "SPATK. For Uhefoe.");
+
+static const u8 sChupacabraDesc[] = _(
+    "Holder moves last.\n"
+    "Attacks do\n"
+    "additional damage.");
+
+static const u8 sHeartGiftDesc[] = _(
+    "Explodes after 2\n"
+    "turns, infesting\n"
+    "the holder.");

@@ -448,7 +448,7 @@
 #define EFFECT_CINDER_TWIRL                 442
 #define EFFECT_CINDER_DRILL                 443
 #define EFFECT_SILENCE                      444
-#define EFFECT_VEXING_KI                    445
+#define EFFECT_TORMENT_HIT                  445
 #define EFFECT_DECAY_BEAM                   446
 #define EFFECT_WARM_WELCOME                 447
 #define EFFECT_RADIOACID                    448
@@ -606,7 +606,9 @@
 #define EFFECT_MOON_BEAM                    600
 #define EFFECT_HUNKER_DOWN                  601
 #define EFFECT_OVERTAKE                     602
+#define EFFECT_POISON_GAS                   603
+#define EFFECT_HIGH_ROLL_HIT                604
 
-#define NUM_BATTLE_MOVE_EFFECTS             603
+#define NUM_BATTLE_MOVE_EFFECTS             605
 
 #endif  // GUARD_CONSTANTS_BATTLE_MOVE_EFFECTS_H

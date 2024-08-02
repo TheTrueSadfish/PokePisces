@@ -262,6 +262,7 @@ struct BattleMove
     u32 ignoresKingsRock:1;
     u32 highCritRatio:1;
     u32 punchingMove:1;
+    u32 switchingMove:1;
     u32 kickingMove:1;
     u32 piercingMove:1;
     u32 sheerForceBoost:1;
@@ -276,6 +277,7 @@ struct BattleMove
     u32 windMove:1;
     u32 slicingMove:1;
     u32 sandMove:1;
+    u32 oozeMove:1;
     u32 minimizeDoubleDamage:1;
     u32 ignoresTargetAbility:1;
     u32 ignoresTargetDefenseEvasionStages:1;

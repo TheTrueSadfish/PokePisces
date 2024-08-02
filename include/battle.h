@@ -84,7 +84,6 @@ struct DisableStruct
     u8 truantSwitchInHack:1;
     u8 mimickedMoves:4;
     u8 rechargeTimer;
-    u8 overtakenTimer;
     u8 autotomizeCount;
     u8 slowStartTimer;
     u8 embargoTimer;
@@ -106,6 +105,13 @@ struct DisableStruct
     u8 spiderweb:1;
     u8 fairyLockTimer;
     u8 shunyongFlinchTimer:2;
+    u8 heartGiftTimer:4;
+    u8 meanLook:1;
+    u8 guardSplit:1;
+    u8 guardSwap:1;
+    u8 powerSplit:1;
+    u8 powerSwap:1;
+    u8 speedSwap:1;
 };
 
 struct ProtectStruct
@@ -160,6 +166,7 @@ struct ProtectStruct
     u32 specialDmg;
     u8 physicalBattlerId;
     u8 specialBattlerId;
+    u32 extraMoveUsed:1;
 };
 
 struct SpecialStatus
@@ -234,7 +241,6 @@ struct SideTimer
     // Timers below this point are not swapped by Court Change
     u8 followmeTimer;
     u8 followmeTarget:3;
-    u8 overtakeTarget:3;
     u8 followmePowder:1; // Rage powder, does not affect grass type pokemon.
     u8 retaliateTimer;
     u8 silenceTimer;
@@ -644,6 +650,7 @@ struct BattleStruct
     u8 dragonpokerBasePower;
     u8 ficklebeamBasePower;
     u8 boundaryBasePower;
+    u8 rollingBasePower;
     u8 presentBasePower;
     u8 roostTypes[MAX_BATTLERS_COUNT][2];
     u8 savedBattlerTarget;
@@ -971,6 +978,7 @@ extern u8 gBattlerSpriteIds[MAX_BATTLERS_COUNT];
 extern u8 gCurrMovePos;
 extern u8 gChosenMovePos;
 extern u16 gCurrentMove;
+extern u16 gTempMove;
 extern u16 gChosenMove;
 extern u16 gCalledMove;
 extern s32 gBattleMoveDamage;

@@ -104,13 +104,13 @@ static const u8 sLeafGuardDescription[] = _("Prevents status conditions\nin hars
 static const u8 sKlutzDescription[] = _("The Pokémon can't use any\nheld items.");
 static const u8 sMoldBreakerDescription[] = _("Moves can be used\nregardless of Abilities.");
 static const u8 sSuperLuckDescription[] = _("Ups chance of critical-hits\nand finding wild held items.");
-static const u8 sAftermathDescription[] = _("Uses a 60 BP Fire-type move\nwhen fainting.");
+static const u8 sAftermathDescription[] = _("Explodes at 1 HP. Survives\nat 1 HP from direct attacks.");
 static const u8 sAnticipationDescription[] = _("May evade moves on the\nfirst turn it's out.");
 static const u8 sForewarnDescription[] = _("Ups BP of Future Sight/Doom\nDesire. Also strike earlier.");
 static const u8 sUnawareDescription[] = _("Ignores foe's stat changes.\nCan't become panicked.");
 static const u8 sTintedLensDescription[] = _("Powers up not very\neffective moves.");
 static const u8 sFilterDescription[] = _("Reduces damage from\nsupereffective attacks.");
-static const u8 sSlowStartDescription[] = _("For three turns, the user's\nAttack and Speed are halved.");
+static const u8 sSlowStartDescription[] = _("For two turns, the user's\nAttack and Speed are halved.");
 static const u8 sScrappyDescription[] = _("Ignores stat drop abilities,\nghost immunities, and Empty.");
 static const u8 sStormDrainDescription[] = _("Draws in Water-type moves to\nboost its Sp. Atk stat.");
 static const u8 sIceBodyDescription[] = _("Heals HP in a hailstorm. May\ncause frostbite on contact.");
@@ -297,12 +297,12 @@ static const u8 sGoldenMeanDescription[] = _("Changes between offensive\nand def
 static const u8 sHeartstringsDescription[] = _("Infatuates the opposite\ngender when entering battle.");
 static const u8 sLovesickDescription[] = _("Becomes infatuated. Spreads\nbetween contact either way.");
 static const u8 sLumberingDescription[] = _("The user is unable to switch\nout.");
-static const u8 sMelancholiaDescription[] = _("Contact with this Pokémon\nspreads the Sadness Ability.");
+static const u8 sMelancholiaDescription[] = _("Damage to this Pokémon\nspreads the Sadness Ability.");
 static const u8 sMilkyWayDescription[] = _("The Pokémon may gather\nCheese from somewhere.");
 static const u8 sMockingDescription[] = _("Lowers foe's Defense and\nSpecial Defense stats.");
 static const u8 sProdigyDescription[] = _("Contact moves always\ncritical-hit.");
 static const u8 sPunisherDescription[] = _("The user changes form if\nhurt by a direct attack.");
-static const u8 sStarsGraceDescription[] = _("After 3 turns, the user's\nSp. Atk and Spd are doubled.");
+static const u8 sStarsGraceDescription[] = _("After 4 turns, the user's\nSp. Atk and Spd are doubled.");
 static const u8 sResetDescription[] = _("Heals HP, status conditions,\nand resets stat changes.");
 static const u8 sReversiDescription[] = _("Summons a room that inverts\ntype matchups.");
 static const u8 sRisingDescription[] = _("Raises the user's Attack,\nSp. Attack, and Speed");
@@ -312,7 +312,7 @@ static const u8 sShamblesDescription[] = _("Rooms make switching moves\nhit firs
 static const u8 sStellarBodyDescription[] = _("Transforms depending on the\nmove's damage category.");
 static const u8 sSugarCoatDescription[] = _("Halves damage at full HP.\nOnly hurt by direct attacks.");
 static const u8 sTimeTurnDescription[] = _("Summons a room that inverts\nthe turn order.");
-static const u8 sTitanicDescription[] = _("Immune to stage hazards/\nstat drops/status ailments.");
+static const u8 sTitanicDescription[] = _("The Pokémon is too big to\ncare about most things.");
 static const u8 sWitchcraftDescription[] = _("Draws in Fairy-type moves to\nboost its Sp. Atk stat.");
 static const u8 sFastTalkerDescription[] = _("Gives priority to the\nPokémon's sound-based moves.");
 static const u8 sSereneAuraDescription[] = _("Promoted additional effects\nfor user and allies.");
@@ -355,7 +355,7 @@ static const u8 sStarScreenDescription[] = _("Extends the duration of\nbarrier m
 static const u8 sStrongholdDescription[] = _("Boosts the user's defenses\nbut permits only one move.");
 static const u8 sTransfusionDescription[] = _("Copies abilities when using\na draining move.");
 static const u8 sWhiteOutDescription[] = _("Boosts the Pokémon's Sp.\nAttack in hail.");
-static const u8 sCinderWaltzDescription[] = _("If hit, counters with a 50\nBP Relic move that may burn.");
+static const u8 sCinderWaltzDescription[] = _("If hit, counters with a move\nthat may burn and spreads.");
 static const u8 sIgnorantBlissDescription[] = _("Ignores a lot.");
 static const u8 sHardboiledDescription[] = _("Ups defenses when hit by\na super effective move.");
 static const u8 sToxicChainDescription[] = _("May badly poison a foe when\nthe user uses a move.");
@@ -366,6 +366,7 @@ static const u8 sAppetiteDescription[] = _("Restores HP after knocking\nout any 
 static const u8 sAllGameDescription[] = _("Plays Mud and Water Sports.\nHas Ground/Water Immunity.");
 static const u8 sShunyongDescription[] = _("Shunyong");
 static const u8 sRegeneratorDescription[] = _("Restores a little HP when\nwithdrawn from battle.");
+static const u8 sDomineerDescription[] = _("Psychic-type moves can hit\nDark-types, and lower Attack.");
 
 #if B_EXPANDED_ABILITY_NAMES == TRUE
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -738,11 +739,12 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_IGNORANT_BLISS] = _("Ignorant Bliss"),
     [ABILITY_HARDBOILED] = _("Hardboiled"),
     [ABILITY_TOXIC_CHAIN] = _("Contagious"),
-    [ABILITY_CHEESE_GUARD] = _("CheeseGuard"),
+    [ABILITY_CHEESE_GUARD] = _("Cheese Guard"),
     [ABILITY_WATCHER] = _("Watcher"),
     [ABILITY_APPETITE] = _("Appetite"),
     [ABILITY_ALL_GAME] = _("All Game"),
     [ABILITY_SHUNYONG] = _("Shunyong"),
+    [ABILITY_DOMINEER] = _("Domineer"),
 };
 #else   // 12 characters
 const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
@@ -1119,7 +1121,8 @@ const u8 gAbilityNames[ABILITIES_COUNT][ABILITY_NAME_LENGTH + 1] =
     [ABILITY_WATCHER] = _("Watcher"),
     [ABILITY_APPETITE] = _("Appetite"),
     [ABILITY_ALL_GAME] = _("All Game"),
-    [ABILITY_SHUNYONG] = _("Shunyong");
+    [ABILITY_SHUNYONG] = _("Shunyong"),
+    [ABILITY_DOMINEER] = _("Domineer"),
 };
 #endif
 
@@ -1498,4 +1501,5 @@ const u8 *const gAbilityDescriptionPointers[ABILITIES_COUNT] =
     [ABILITY_APPETITE] = sAppetiteDescription,
     [ABILITY_ALL_GAME] = sAllGameDescription,
     [ABILITY_SHUNYONG] = sShunyongDescription,
+    [ABILITY_DOMINEER] = sDomineerDescription,
 };

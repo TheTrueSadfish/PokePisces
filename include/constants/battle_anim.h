@@ -420,6 +420,11 @@
 #define ANIM_TAG_GIANTS_SPEAR               (ANIM_SPRITES_START + 406)
 #define ANIM_TAG_LIGHT_BALL                 (ANIM_SPRITES_START + 407)
 #define ANIM_TAG_PIN                        (ANIM_SPRITES_START + 408)
+#define ANIM_TAG_BEAM                       (ANIM_SPRITES_START + 409)
+#define ANIM_TAG_GREEN_MAYNIMO              (ANIM_SPRITES_START + 410)
+#define ANIM_TAG_BLUE_MAYNIMO               (ANIM_SPRITES_START + 411)
+#define ANIM_TAG_RED_MAYNIMO                (ANIM_SPRITES_START + 412)
+#define ANIM_TAG_STEAMDROP                  (ANIM_SPRITES_START + 413)
 
 // battlers
 #define ANIM_ATTACKER         0
@@ -533,6 +538,7 @@
 #define BG_URANIUM 81
 #define BG_THUNDER_2 82
 #define BG_INVERSE_ROOM 83
+#define BG_ATTRACT 84
 
 // table ids for general animations (gBattleAnims_General)
 #define B_ANIM_STATS_CHANGE             0
@@ -612,6 +618,7 @@
 #define B_ANIM_STATUS_BLOOMING          11
 #define B_ANIM_STATUS_EXPOSED           12
 #define B_ANIM_STATUS_REST              13
+#define B_ANIM_STATUS_FRS               14
 
 // Tasks with return values often assign them to gBattleAnimArgs[7].
 #define ARG_RET_ID 7

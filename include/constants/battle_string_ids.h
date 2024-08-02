@@ -781,8 +781,15 @@
 #define STRINGID_PKMNSITEMCALMEDIT                    779
 #define STRINGID_PKMNGEMSTONEMAXEDEVASION             780
 #define STRINGID_USINGITEMSTATOFPKMNFELL              781
+#define STRINGID_TARGETISBEINGSALTCORNED              782
+#define STRINGID_ABILITYLETITUSEMOVE                  783
+#define STRINGID_WEPEARBERRYHIT                       784
+#define STRINGID_PKMNCUTSHPWITH                       785
+#define STRINGID_HEALERRESTORATION                    786
+#define STRINGID_TOOBIGTOCARE                         787
+#define STRINGID_HIGHROLLHITROLL                      788
 
-#define BATTLESTRINGS_COUNT                           782
+#define BATTLESTRINGS_COUNT                           789
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

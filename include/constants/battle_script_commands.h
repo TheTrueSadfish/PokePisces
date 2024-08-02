@@ -277,7 +277,15 @@
 #define VARIOUS_JUMP_IF_HAS_A_STAT_BOOST             184
 #define VARIOUS_POWER_SHIFT                          185
 #define VARIOUS_TRY_DAMPING                          186
-#define VARIOUS_TRY_OVERTAKE                         187
+#define VARIOUS_CHECK_MEAN_LOOK                      187
+#define VARIOUS_CHECK_GUARD_SPLIT                    188
+#define VARIOUS_CHECK_GUARD_SWAP                     189
+#define VARIOUS_CHECK_POWER_SPLIT                    190
+#define VARIOUS_CHECK_POWER_SWAP                     191
+#define VARIOUS_CHECK_SPEED_SWAP                     192
+#define VARIOUS_STAGGER_DAMAGE                       193
+#define VARIOUS_HIGH_ROLL_HIT                        194
+#define VARIOUS_ARBITER_DAMAGE                       195
 
 // Cmd_manipulatedamage
 #define DMG_CHANGE_SIGN            0
@@ -355,7 +363,8 @@
 #define MOVEEND_EMERGENCY_EXIT                    33
 #define MOVEEND_SYMBIOSIS                         34
 #define MOVEEND_CLEAR_BITS                        35
-#define MOVEEND_COUNT                             36
+#define MOVEEND_DURIN_BERRY                       36
+#define MOVEEND_COUNT                             37
 
 // switch cases
 #define B_SWITCH_NORMAL     0

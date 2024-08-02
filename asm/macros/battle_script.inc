@@ -1715,10 +1715,6 @@
 	various \battler, VARIOUS_SET_LAST_USED_ABILITY
 	.endm
 
-	.macro tryovertake
-	various 0, VARIOUS_TRY_OVERTAKE
-	.endm
-
 	.macro tryhealpulse battler:req, failInstr:req
 	various \battler, VARIOUS_TRY_HEAL_PULSE
 	.4byte \failInstr
@@ -1982,8 +1978,12 @@
 	.4byte \failInstr
 	.endm
 
-	.macro boundarydamagecalculation battler:req
-	various \battler, VARIOUS_BOUNDARY_OF_DEATH
+	.macro boundarydamagecalculation
+	various BS_ATTACKER, VARIOUS_BOUNDARY_OF_DEATH
+	.endm
+
+	.macro highrollhitdamagecalculation
+	various BS_ATTACKER, VARIOUS_HIGH_ROLL_HIT
 	.endm
 
 	.macro jumpifnoally battler:req, jumpInstr:req
@@ -2163,6 +2163,36 @@
 
 	.macro trynoretreat battler:req, failInstr:req
 	various \battler, VARIOUS_TRY_NO_RETREAT
+	.4byte \failInstr
+	.endm
+
+	.macro checkmeanlook failInstr:req
+	various BS_ATTACKER, VARIOUS_CHECK_MEAN_LOOK
+	.4byte \failInstr
+	.endm
+
+	.macro checkguardsplit failInstr:req
+	various BS_ATTACKER, VARIOUS_CHECK_GUARD_SPLIT
+	.4byte \failInstr
+	.endm
+
+	.macro checkguardswap failInstr:req
+	various BS_ATTACKER, VARIOUS_CHECK_GUARD_SWAP
+	.4byte \failInstr
+	.endm
+
+	.macro checkpowersplit failInstr:req
+	various BS_ATTACKER, VARIOUS_CHECK_POWER_SPLIT
+	.4byte \failInstr
+	.endm
+
+	.macro checkpowerswap failInstr:req
+	various BS_ATTACKER, VARIOUS_CHECK_POWER_SWAP
+	.4byte \failInstr
+	.endm
+
+	.macro checkspeedswap failInstr:req
+	various BS_ATTACKER, VARIOUS_CHECK_SPEED_SWAP
 	.4byte \failInstr
 	.endm
 
@@ -2509,12 +2539,20 @@
 	.4byte \failInstr
 	.endm
 
+	.macro staggerdamage
+	various 0, VARIOUS_STAGGER_DAMAGE
+	.endm
+
+	.macro arbiterdamage
+	various 0, VARIOUS_ARBITER_DAMAGE
+	.endm
+
 	.macro setpump battler:req
 	various \battler, VARIOUS_SET_PUMP
 	.endm
 
-	.macro remodelcheck jumpInstr:req
-	various 0, VARIOUS_REMODEL_CHECK
+	.macro remodelcheck battler:req, jumpInstr:req
+	various \battler, VARIOUS_REMODEL_CHECK
 	.4byte \jumpInstr
 	.endm
 

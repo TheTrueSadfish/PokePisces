@@ -166,6 +166,7 @@ EWRAM_DATA u8 gBattlerSpriteIds[MAX_BATTLERS_COUNT] = {0};
 EWRAM_DATA u8 gCurrMovePos = 0;
 EWRAM_DATA u8 gChosenMovePos = 0;
 EWRAM_DATA u16 gCurrentMove = 0;
+EWRAM_DATA u16 gTempMove = 0;
 EWRAM_DATA u16 gChosenMove = 0;
 EWRAM_DATA u16 gCalledMove = 0;
 EWRAM_DATA s32 gBattleMoveDamage = 0;
@@ -535,6 +536,9 @@ const u8 gStatusConditionString_BurnJpn[] = _("やけど$$$$");
 const u8 gStatusConditionString_IceJpn[] = _("こおり$$$$");
 const u8 gStatusConditionString_ConfusionJpn[] = _("こんらん$$$");
 const u8 gStatusConditionString_LoveJpn[] = _("メロメロ$$$");
+const u8 gStatusConditionString_PanicJpn[] = _("こおり$$$$");
+const u8 gStatusConditionString_ExposedJpn[] = _("こおり$$$$");
+const u8 gStatusConditionString_BloomingJpn[] = _("こおり$$$$");
 
 const u8 *const gStatusConditionStringsTable[][2] =
 {
@@ -544,7 +548,10 @@ const u8 *const gStatusConditionStringsTable[][2] =
     {gStatusConditionString_BurnJpn, gText_Burn},
     {gStatusConditionString_IceJpn, gText_Ice},
     {gStatusConditionString_ConfusionJpn, gText_Confusion},
-    {gStatusConditionString_LoveJpn, gText_Love}
+    {gStatusConditionString_LoveJpn, gText_Love},
+    {gStatusConditionString_PanicJpn, gText_Panic},
+    {gStatusConditionString_ExposedJpn, gText_Exposed},
+    {gStatusConditionString_BloomingJpn, gText_Blooming}
 };
 
 void CB2_InitBattle(void)
@@ -3375,6 +3382,7 @@ void FaintClearSetData(u32 battler)
     gProtectStructs[battler].stealMove = FALSE;
     gProtectStructs[battler].prlzImmobility = FALSE;
     gProtectStructs[battler].confusionSelfDmg = FALSE;
+    gProtectStructs[battler].extraMoveUsed = FALSE;
     gProtectStructs[battler].targetAffected = FALSE;
     gProtectStructs[battler].chargingTurn = FALSE;
     gProtectStructs[battler].fleeType = 0;
@@ -4709,6 +4717,8 @@ u32 GetBattlerTotalSpeedStatArgs(u32 battler, u32 ability, u32 holdEffect)
         speed *= 2;
     else if (ability == ABILITY_SURGE_SURFER && gFieldStatuses & STATUS_FIELD_ELECTRIC_TERRAIN)
         speed *= 2;
+    else if (ability == ABILITY_RISING)
+        speed *= 1.25;
     else if (ability == ABILITY_SLOW_START && gDisableStructs[battler].slowStartTimer != 0)
         speed /= 2;
     else if (ability == ABILITY_STARS_GRACE && gDisableStructs[battler].slowStartTimer >= 4)
@@ -4846,6 +4856,10 @@ s8 GetMovePriority(u32 battler, u16 move)
     {
         priority++;
     }
+    else if ((ability == ABILITY_SHAMBLES) && (gFieldStatuses & STATUS_FIELD_TERRAIN_ANY || gFieldStatuses & STATUS_FIELD_TRICK_ROOM || gFieldStatuses & STATUS_FIELD_WONDER_ROOM || gFieldStatuses & STATUS_FIELD_MAGIC_ROOM || gFieldStatuses & STATUS_FIELD_INVERSE_ROOM) && (gBattleMoves[move].switchingMove))
+    {
+        priority++;
+    }
     else if ((gBattleMons[battler].species == SPECIES_MOSKOPO) && (GetBattlerHoldEffect(battler, TRUE) == HOLD_EFFECT_LONG_NOSE) && ((gBattleMoves[move].type == TYPE_BUG) || (gBattleMoves[move].type == TYPE_DARK)))
     {
         priority++;
@@ -4890,6 +4904,7 @@ s8 GetMovePriority(u32 battler, u16 move)
         case EFFECT_SPIRIT_AWAY:
         case EFFECT_ROOST:
         case EFFECT_JUNGLE_HEALING:
+        case EFFECT_BLACK_BUFFET:
         case EFFECT_VENOM_DRAIN:
         case EFFECT_LONE_SHARK:
             priority += 3;
@@ -4957,6 +4972,10 @@ u32 GetWhichBattlerFasterArgs(u32 battler1, u32 battler2, bool32 ignoreChosenMov
         else if (holdEffectBattler1 == HOLD_EFFECT_LAGGING_TAIL && holdEffectBattler2 != HOLD_EFFECT_LAGGING_TAIL)
             strikesFirst = 1;
         else if (holdEffectBattler2 == HOLD_EFFECT_LAGGING_TAIL && holdEffectBattler1 != HOLD_EFFECT_LAGGING_TAIL)
+            strikesFirst = 0;
+        else if (holdEffectBattler1 == HOLD_EFFECT_CHUPACABRA && holdEffectBattler2 != HOLD_EFFECT_CHUPACABRA)
+            strikesFirst = 1;
+        else if (holdEffectBattler2 == HOLD_EFFECT_CHUPACABRA && holdEffectBattler1 != HOLD_EFFECT_CHUPACABRA)
             strikesFirst = 0;
         else if (ability1 == ABILITY_STALL && ability2 != ABILITY_STALL)
             strikesFirst = 1;
@@ -5158,12 +5177,6 @@ static void TurnValuesCleanUp(bool8 var0)
                 if (gDisableStructs[i].rechargeTimer == 0)
                     gBattleMons[i].status2 &= ~STATUS2_RECHARGE;
                     gStatuses4[i] &= ~STATUS4_RECHARGE_REDUCE;
-            }
-            if (gDisableStructs[i].overtakenTimer)
-            {
-                gDisableStructs[i].overtakenTimer--;
-                if (gDisableStructs[i].overtakenTimer == 0)
-                    gStatuses4[i] &= ~STATUS4_OVERTAKEN;
             }
         }
 
@@ -5839,7 +5852,7 @@ void SetTypeBeforeUsingMove(u32 move, u32 battlerAtk)
         if (holdEffect == gBattleMoves[move].argument)
             gBattleStruct->dynamicMoveType = ItemId_GetSecondaryId(gBattleMons[battlerAtk].item) | F_DYNAMIC_TYPE_2;
     }
-    else if (gBattleMoves[move].effect == EFFECT_REVELATION_DANCE || gBattleMoves[move].effect == EFFECT_SPIT_UP || gBattleMoves[move].effect == EFFECT_RAGE)
+    else if (gBattleMoves[move].effect == EFFECT_REVELATION_DANCE || gBattleMoves[move].effect == EFFECT_SPIT_UP || gBattleMoves[move].effect == EFFECT_RAGE || gCurrentMove == MOVE_RAGING_BULL)
     {
         if (gBattleMons[battlerAtk].type1 != TYPE_MYSTERY)
             gBattleStruct->dynamicMoveType = gBattleMons[battlerAtk].type1 | F_DYNAMIC_TYPE_2;
@@ -5970,6 +5983,21 @@ void SetTypeBeforeUsingMove(u32 move, u32 battlerAtk)
     if (holdEffect == HOLD_EFFECT_GREPA_BERRY)
     {
         if (gBattleMoves[move].kickingMove)
+        {
+            if (attackerAbility == ABILITY_RIPEN)
+            {
+                gSpecialStatuses[battlerAtk].gemParam = 100;
+            }
+            else
+            {
+                gSpecialStatuses[battlerAtk].gemParam = 50;
+            }
+                gSpecialStatuses[battlerAtk].gemBoost = TRUE;
+        }
+    }
+    if (holdEffect == HOLD_EFFECT_NOMEL_BERRY)
+    {
+        if (gBattleMoves[move].piercingMove)
         {
             if (attackerAbility == ABILITY_RIPEN)
             {

@@ -2423,6 +2423,17 @@ const struct SpriteTemplate gStrengthSapRedSmokeTemplate =
     .callback = AnimSpriteOnMonPos
 };
 
+const struct SpriteTemplate gBoundaryBlackBloodTemplate =
+{
+    .tileTag = ANIM_TAG_BLACK_GRAY_SMOKE,
+    .paletteTag = ANIM_TAG_BLACK_GRAY_SMOKE,
+    .oam = &gOamData_AffineOff_ObjNormal_32x32,
+    .anims = gOctazookaAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimSpriteOnMonPos
+};
+
 const struct SpriteTemplate gStrengthSapRedInwardTemplate =
 {
     .tileTag = ANIM_TAG_TEAL_ALERT,
@@ -4345,11 +4356,11 @@ const struct SpriteTemplate gSpriteTemplate_SpiritBreakExplode = {
 };
 
 // chloroblast
-static const union AffineAnimCmd sSpriteAffineAnim_HydroCannonBall[] = {
+const union AffineAnimCmd sSpriteAffineAnim_HydroCannonBall[] = {
 	AFFINEANIMCMD_FRAME(16, 16, 0, 16), //Double in size
 	AFFINEANIMCMD_END
 };
-static const union AffineAnimCmd* const sSpriteAffineAnimTable_HydroCannonBall[] = {
+const union AffineAnimCmd* const sSpriteAffineAnimTable_HydroCannonBall[] = {
 	sSpriteAffineAnim_HydroCannonBall,
 };
 const struct SpriteTemplate gSpriteTemplate_ChloroblastShot = {
@@ -5408,6 +5419,16 @@ const struct SpriteTemplate gBloomDoomPetalSpinSpriteTemplate =
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = AnimFireSpiralOutward
 };
+const struct SpriteTemplate gSnapBlossomPetalSpinSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_FLOWER,
+    .paletteTag = ANIM_TAG_FLOWER,
+    .oam = &gOamData_AffineOff_ObjNormal_16x16,
+    .anims = gPetalDanceBigFlowerAnimTable,
+    .images = NULL,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = AnimPetalSpiralOutward
+};
 const struct SpriteTemplate gBloomDoomGreenChargeSpriteTemplate =
 {
     .tileTag = ANIM_TAG_CIRCLE_OF_LIGHT,
@@ -5702,6 +5723,18 @@ const struct SpriteTemplate gDevastatingDrakeStrikeSpriteTemplate =
     .affineAnims = sDevastatingDrakeStrikeAffineAnimTable,
     .callback = AnimFlyBallAttack
 };
+
+const struct SpriteTemplate gSharpGlideStrikeSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_BIRD,
+    .paletteTag = ANIM_TAG_BIRD,
+    .oam = &gOamData_AffineNormal_ObjNormal_64x64,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = sDevastatingDrakeStrikeAffineAnimTable,
+    .callback = AnimFlyBallAttack
+};
+
 const struct SpriteTemplate gDevastatingDrakePurpleBlastSpriteTemplate =
 {
     .tileTag = ANIM_TAG_FIRE_PLUME,
@@ -5808,6 +5841,16 @@ const struct SpriteTemplate gBlackHoleEclipseRedRingSpriteTemplate =
 {
     .tileTag = ANIM_TAG_THIN_RING,
     .paletteTag = ANIM_TAG_VERTICAL_HEX,
+    .oam = &gOamData_AffineDouble_ObjNormal_64x64,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = gThinRingExpandingAffineAnimTable,
+    .callback = AnimSpriteOnMonPos
+};
+const struct SpriteTemplate gBeatBoxBlueRingSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_THIN_RING,
+    .paletteTag = ANIM_TAG_WATER_ORB,
     .oam = &gOamData_AffineDouble_ObjNormal_64x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
@@ -6658,6 +6701,17 @@ const struct SpriteTemplate gPilgrimageOnslaughtSpriteTemplate =
     .tileTag = ANIM_TAG_PILGRIMAGE_FALLING,
     .paletteTag = ANIM_TAG_PILGRIMAGE_FALLING,
     .oam = &gOamData_AffineNormal_ObjBlend_32x32,
+    .anims = gDummySpriteAnimTable,
+    .images = NULL,
+    .affineAnims = sArrowRaidOnslaughtAffineAnimTable,
+    .callback = AnimAssistPawprint
+};
+
+const struct SpriteTemplate gBloodMoonOnslaughtSpriteTemplate =
+{
+    .tileTag = ANIM_TAG_BEAM,
+    .paletteTag = ANIM_TAG_BEAM,
+    .oam = &gOamData_AffineNormal_ObjBlend_64x64,
     .anims = gDummySpriteAnimTable,
     .images = NULL,
     .affineAnims = sArrowRaidOnslaughtAffineAnimTable,
@@ -8362,7 +8416,7 @@ static void AnimHappyHourCoinShower(struct Sprite *sprite)
 static void AnimMakingItRain(struct Sprite *sprite)
 {
     if (gBattleAnimArgs[3] != 0)
-        SetAverageBattlerPositions(gBattleAnimTarget, FALSE, &sprite->x, &sprite->y);   //coin shower on attacker
+        SetAverageBattlerPositions(gBattleAnimTarget, FALSE, &sprite->x, &sprite->y);   //coin shower on target
 
     sprite->x += gBattleAnimArgs[0];
     sprite->y += 14;

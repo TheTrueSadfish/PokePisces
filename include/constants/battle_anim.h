@@ -425,6 +425,12 @@
 #define ANIM_TAG_BLUE_MAYNIMO               (ANIM_SPRITES_START + 411)
 #define ANIM_TAG_RED_MAYNIMO                (ANIM_SPRITES_START + 412)
 #define ANIM_TAG_STEAMDROP                  (ANIM_SPRITES_START + 413)
+#define ANIM_TAG_BLOOD_MOON                 (ANIM_SPRITES_START + 414)
+#define ANIM_TAG_RED_EXPLOSION              (ANIM_SPRITES_START + 415)
+#define ANIM_TAG_CANDY_ORBS                 (ANIM_SPRITES_START + 416)
+#define ANIM_TAG_STAR                       (ANIM_SPRITES_START + 417)
+#define ANIM_TAG_DUNE_SLICER                (ANIM_SPRITES_START + 418)
+#define ANIM_TAG_BLACK_GRAY_SMOKE           (ANIM_SPRITES_START + 419)
 
 // battlers
 #define ANIM_ATTACKER         0
@@ -539,6 +545,8 @@
 #define BG_THUNDER_2 82
 #define BG_INVERSE_ROOM 83
 #define BG_ATTRACT 84
+#define BG_RED 85
+#define BG_PINK_IN_AIR 86
 
 // table ids for general animations (gBattleAnims_General)
 #define B_ANIM_STATS_CHANGE             0

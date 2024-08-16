@@ -721,6 +721,8 @@ struct BattleStruct
     u16 shunyongChosenMove;
     u8 shunyongTarget;
     u8 shunyongGoldPlainsHpUses:2; // 75%, 50%, 25% flags
+    u8 distortedTypeMatchups;
+    u8 aiCalcInProgress:1;
 };
 
 // The palaceFlags member of struct BattleStruct contains 1 flag per move to indicate which moves the AI should consider,
@@ -752,6 +754,8 @@ STATIC_ASSERT(sizeof(((struct BattleStruct *)0)->palaceFlags) * 8 >= MAX_BATTLER
                           || gBattleMoves[move].effect == EFFECT_RECOIL_50_STATUS   \
                           || gBattleMoves[move].effect == EFFECT_RECOIL_50_HAZARD   \
                           || gBattleMoves[move].effect == EFFECT_CRASH_LAND         \
+                          || gBattleMoves[move].effect == EFFECT_WILD_CHARGE        \
+                          || gBattleMoves[move].effect == EFFECT_SUBMISSION         \
                           || gBattleMoves[move].effect == EFFECT_WOOD_HAMMER        )
 
 #define BATTLER_MAX_HP(battlerId)(gBattleMons[battlerId].hp == gBattleMons[battlerId].maxHP)

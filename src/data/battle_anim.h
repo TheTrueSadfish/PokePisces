@@ -1470,11 +1470,17 @@ const struct CompressedSpriteSheet gBattleAnimPicTable[] =
     {gBattleAnimSpriteGfx_GiantsSpear, 0x800, ANIM_TAG_GIANTS_SPEAR},
     {gBattleAnimSpriteGfx_LightBall, 0x480, ANIM_TAG_LIGHT_BALL},
     {gBattleAnimSpriteGfx_Pin, 0x0080, ANIM_TAG_PIN},
-    {gBattleAnimSpriteGfx_Beam, 0x0200, ANIM_TAG_BEAM},
+    {gBattleAnimSpriteGfx_Beam, 0x0800, ANIM_TAG_BEAM},
     {gBattleAnimSpriteGfx_GreenMaynimo, 0x0100, ANIM_TAG_GREEN_MAYNIMO},
     {gBattleAnimSpriteGfx_BlueMaynimo, 0x0100, ANIM_TAG_BLUE_MAYNIMO},
     {gBattleAnimSpriteGfx_RedMaynimo, 0x0100, ANIM_TAG_RED_MAYNIMO},
     {gBattleAnimSpriteGfx_Steamdrop, 0xa00, ANIM_TAG_STEAMDROP},
+    {gBattleAnimSpriteGfx_BloodMoon, 0x0800, ANIM_TAG_BLOOD_MOON},
+    {gBattleAnimSpriteGfx_RedExplosion, 0x0800, ANIM_TAG_RED_EXPLOSION},
+    {gBattleAnimSpriteGfx_CandyOrbs, 0x0180, ANIM_TAG_CANDY_ORBS},
+    {gBattleAnimSpriteGfx_Star, 0x0180, ANIM_TAG_STAR},
+    {gBattleAnimSpriteGfx_DuneSlicer, 0x0200, ANIM_TAG_DUNE_SLICER},
+    {gBattleAnimSpriteGfx_BlackGraySmoke, 0x0A00, ANIM_TAG_BLACK_GRAY_SMOKE},
 };
 
 const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
@@ -1950,6 +1956,12 @@ const struct CompressedSpritePalette gBattleAnimPaletteTable[] =
     {gBattleAnimSpritePal_BlueMaynimo, ANIM_TAG_BLUE_MAYNIMO},
     {gBattleAnimSpritePal_RedMaynimo, ANIM_TAG_RED_MAYNIMO},
     {gBattleAnimSpritePal_Steamdrop, ANIM_TAG_STEAMDROP},
+    {gBattleAnimSpritePal_BloodMoon, ANIM_TAG_BLOOD_MOON},
+    {gBattleAnimSpritePal_RedExplosion, ANIM_TAG_RED_EXPLOSION},
+    {gBattleAnimSpritePal_CandyOrbs, ANIM_TAG_CANDY_ORBS},
+    {gBattleAnimSpritePal_Star, ANIM_TAG_STAR},
+    {gBattleAnimSpritePal_DuneSlicer, ANIM_TAG_DUNE_SLICER},
+    {gBattleAnimSpritePal_BlackGraySmoke, ANIM_TAG_BLACK_GRAY_SMOKE},
 };
 
 const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
@@ -2040,4 +2052,6 @@ const struct BattleAnimBackground gBattleAnimBackgroundTable[] =
     [BG_THUNDER_2]                 = {gBattleAnimBgImage_Thunder,                 gBattleAnimBgPalette_Thunder2,                gBattleAnimBgTilemap_Thunder},
     [BG_INVERSE_ROOM]              = {gBattleAnimBgImage_TrickRoom,               gBattleAnimBgPalette_InverseRoom,             gBattleAnimBgTilemap_TrickRoom},
     [BG_ATTRACT]                   = {gBattleAnimBgImage_Attract,                 gBattleAnimBgPalette_Attract,                 gBattleAnimBgTilemap_RealAttract},
+    [BG_RED]                       = {gBattleAnimBgImage_Red,                     gBattleAnimBgPalette_Red,                     gBattleAnimBgTilemap_BlackholeEclipse},
+    [BG_PINK_IN_AIR]               = {gBattleAnimBgImage_PinkInAir,               gBattleAnimBgPalette_PinkInAir,               gBattleAnimBgTilemap_InAir},
 };

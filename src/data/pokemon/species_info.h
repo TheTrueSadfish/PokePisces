@@ -812,14 +812,14 @@
         .noFlip = FALSE,                                \
     }
 
-#define DUDUNSPARS_SPECIES_INFO                                                \
+#define DUDUNSPARS_SPECIES_INFO                                                 \
     {                                                                           \
         .baseHP        = 135,                                                   \
         .baseAttack    = 110,                                                   \
         .baseDefense   = 80,                                                    \
         .baseSpeed     = 55,                                                    \
         .baseSpAttack  = 85,                                                    \
-        .baseSpDefense = 80,                                                    \
+        .baseSpDefense = 75,                                                    \
         .types = { TYPE_NORMAL, TYPE_NORMAL },                                  \
         .catchRate = 45,                                                        \
         .expYield = 218,                                                        \
@@ -7640,7 +7640,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_ERRATIC,
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_BUG},
-        .abilities = {ABILITY_SPEED_BOOST, ABILITY_INFILTRATOR, ABILITY_TINTED_LENS},
+        .abilities = {ABILITY_SPEED_BOOST, ABILITY_STEADFAST, ABILITY_TINTED_LENS},
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },
@@ -21249,7 +21249,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_DRAGON},
-        .abilities = {ABILITY_OVERCOAT, ABILITY_NEUTRALIZING_GAS, ABILITY_BULLETPROOF, ABILITY_NONE},
+        .abilities = {ABILITY_STALL, ABILITY_NEUTRALIZING_GAS, ABILITY_BULLETPROOF, ABILITY_NONE},
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
@@ -21271,7 +21271,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_DRAGON},
-        .abilities = {ABILITY_OVERCOAT, ABILITY_NEUTRALIZING_GAS, ABILITY_BULLETPROOF, ABILITY_NONE},
+        .abilities = {ABILITY_STALL, ABILITY_NEUTRALIZING_GAS, ABILITY_BULLETPROOF, ABILITY_NONE},
         .bodyColor = BODY_COLOR_PURPLE,
         .noFlip = FALSE,
     },
@@ -22560,7 +22560,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD},
-        .abilities = {ABILITY_PURPLE_HAZE, ABILITY_ZEN_INCENSE, ABILITY_WHITE_SMOKE},
+        .abilities = {ABILITY_PURPLE_HAZE, ABILITY_PINK_MIST, ABILITY_WHITE_SMOKE},
         .bodyColor = BODY_COLOR_WHITE,
         .noFlip = FALSE,
     },
@@ -24828,7 +24828,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_ERRATIC,
         .eggGroups = { EGG_GROUP_BUG, EGG_GROUP_HUMAN_LIKE},
-        .abilities = {ABILITY_SYMBIOSIS, ABILITY_DANCER, ABILITY_CHEESE_GUARD},
+        .abilities = {ABILITY_SYMBIOSIS, ABILITY_DANCER, ABILITY_HARVEST},
         .bodyColor = BODY_COLOR_PINK,
         .noFlip = FALSE,
     },
@@ -29729,7 +29729,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     [SPECIES_SPINDA_DESERT] = SPINDA_SPECIES_INFO(BODY_COLOR_YELLOW),
     [SPECIES_SPINDA_FOREST] = SPINDA_SPECIES_INFO(BODY_COLOR_GREEN),
     [SPECIES_SPINDA_MOUNTAIN] = SPINDA_SPECIES_INFO(BODY_COLOR_BLUE),
-    [SPECIES_SPINDA_PLAINS2] = SPINDA_SPECIES_INFO(BODY_COLOR_RED),
+    [SPECIES_SPINDA_PLAINS] = SPINDA_SPECIES_INFO(BODY_COLOR_RED),
 
     [SPECIES_KODOUGH_BLUNT] =
     {

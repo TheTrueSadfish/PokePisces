@@ -421,6 +421,9 @@ const u32 gBattleAnimSpritePal_SmallEmber[] = INCBIN_U32("graphics/battle_anims/
 const u32 gBattleAnimSpriteGfx_GraySmoke[] = INCBIN_U32("graphics/battle_anims/sprites/gray_smoke.4bpp.lz");
 const u32 gBattleAnimSpritePal_GraySmoke[] = INCBIN_U32("graphics/battle_anims/sprites/gray_smoke.gbapal.lz");
 
+const u32 gBattleAnimSpriteGfx_BlackGraySmoke[] = INCBIN_U32("graphics/battle_anims/sprites/black_gray_smoke.4bpp.lz");
+const u32 gBattleAnimSpritePal_BlackGraySmoke[] = INCBIN_U32("graphics/battle_anims/sprites/black_gray_smoke.gbapal.lz");
+
 const u32 gBattleAnimSpritePal_Fire[] = INCBIN_U32("graphics/battle_anims/sprites/fire.gbapal.lz");
 const u32 gBattleAnimSpriteGfx_Fire[] = INCBIN_U32("graphics/battle_anims/sprites/fire.4bpp.lz");
 
@@ -1039,6 +1042,21 @@ const u32 gBattleAnimSpritePal_Spiral[] = INCBIN_U32("graphics/battle_anims/spri
 const u32 gBattleAnimSpriteGfx_Moon[] = INCBIN_U32("graphics/battle_anims/sprites/moon.4bpp.lz");
 const u32 gBattleAnimSpritePal_Moon[] = INCBIN_U32("graphics/battle_anims/sprites/moon.gbapal.lz");
 
+const u32 gBattleAnimSpriteGfx_BloodMoon[] = INCBIN_U32("graphics/battle_anims/sprites/blood_moon.4bpp.lz");
+const u32 gBattleAnimSpritePal_BloodMoon[] = INCBIN_U32("graphics/battle_anims/sprites/blood_moon.gbapal.lz");
+
+const u32 gBattleAnimSpriteGfx_RedExplosion[] = INCBIN_U32("graphics/battle_anims/sprites/redexplosion.4bpp.lz");
+const u32 gBattleAnimSpritePal_RedExplosion[] = INCBIN_U32("graphics/battle_anims/sprites/redexplosion.gbapal.lz");
+
+const u32 gBattleAnimSpriteGfx_CandyOrbs[] = INCBIN_U32("graphics/battle_anims/sprites/candy_orbs.4bpp.lz");
+const u32 gBattleAnimSpritePal_CandyOrbs[] = INCBIN_U32("graphics/battle_anims/sprites/candy_orbs.gbapal.lz");
+
+const u32 gBattleAnimSpriteGfx_Star[] = INCBIN_U32("graphics/battle_anims/sprites/star.4bpp.lz");
+const u32 gBattleAnimSpritePal_Star[] = INCBIN_U32("graphics/battle_anims/sprites/star.gbapal.lz");
+
+const u32 gBattleAnimSpriteGfx_DuneSlicer[] = INCBIN_U32("graphics/battle_anims/sprites/dune_slicer.4bpp.lz");
+const u32 gBattleAnimSpritePal_DuneSlicer[] = INCBIN_U32("graphics/battle_anims/sprites/dune_slicer.gbapal.lz");
+
 const u32 gBattleAnimSpriteGfx_GreenSparkle[] = INCBIN_U32("graphics/battle_anims/sprites/green_sparkle.4bpp.lz");
 const u32 gBattleAnimSpritePal_GreenSparkle[] = INCBIN_U32("graphics/battle_anims/sprites/green_sparkle.gbapal.lz");
 
@@ -1416,6 +1434,9 @@ const u32 gBattleAnimBgImage_InAir[] = INCBIN_U32("graphics/battle_anims/backgro
 const u32 gBattleAnimBgPalette_InAir[] = INCBIN_U32("graphics/battle_anims/backgrounds/in_air.gbapal.lz");
 const u32 gBattleAnimBgTilemap_InAir[] = INCBIN_U32("graphics/battle_anims/backgrounds/in_air.bin.lz");
 
+const u32 gBattleAnimBgImage_PinkInAir[] = INCBIN_U32("graphics/battle_anims/backgrounds/pink_in_air.4bpp.lz");
+const u32 gBattleAnimBgPalette_PinkInAir[] = INCBIN_U32("graphics/battle_anims/backgrounds/pink_in_air.gbapal.lz");
+
 const u32 gBattleAnimSpriteGfx_Protect[] = INCBIN_U32("graphics/battle_anims/sprites/protect.4bpp.lz");
 const u32 gBattleAnimSpritePal_Protect[] = INCBIN_U32("graphics/battle_anims/sprites/protect.gbapal.lz");
 
@@ -1465,6 +1486,9 @@ const u32 gBattleAnimBgPalette_AuraSphere[] = INCBIN_U32("graphics/battle_anims/
 const u32 gBattleAnimBgImage_BlackholeEclipse[] = INCBIN_U32("graphics/battle_anims/backgrounds/blackhole_eclipse.4bpp.lz");
 const u32 gBattleAnimBgPalette_BlackholeEclipse[] = INCBIN_U32("graphics/battle_anims/backgrounds/blackhole_eclipse.gbapal.lz");
 const u32 gBattleAnimBgTilemap_BlackholeEclipse[] = INCBIN_U32("graphics/battle_anims/backgrounds/blackhole_eclipse.bin.lz");
+
+const u32 gBattleAnimBgImage_Red[] = INCBIN_U32("graphics/battle_anims/backgrounds/red.4bpp.lz");
+const u32 gBattleAnimBgPalette_Red[] = INCBIN_U32("graphics/battle_anims/backgrounds/red.gbapal.lz");
 
 const u32 gBattleAnimBgImage_BloomDoom[] = INCBIN_U32("graphics/battle_anims/backgrounds/bloom_doom.4bpp.lz");
 const u32 gBattleAnimBgPalette_BloomDoom[] = INCBIN_U32("graphics/battle_anims/backgrounds/bloom_doom.gbapal.lz");

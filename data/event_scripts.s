@@ -3650,3 +3650,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Gym8Corridor/scripts.inc"
 
 	.include "data/maps/CultipexCave/scripts.inc"
+
+	.include "data/maps/SweltornTransitionHallway/scripts.inc"
+
+	.include "data/maps/NavigulfUnderwater/scripts.inc"
